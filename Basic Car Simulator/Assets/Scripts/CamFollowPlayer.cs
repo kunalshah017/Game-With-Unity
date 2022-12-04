@@ -6,7 +6,8 @@ public class CamFollowPlayer : MonoBehaviour
 {
 
     public GameObject player;
-    private Vector3 offset = new Vector3(0.14f, 5.6f, -12.9f);
+    private Vector3 offset = new Vector3(0.14f, 4.4f, -7.8f);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +15,9 @@ public class CamFollowPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         transform.position = player.transform.position + offset;
+
     }
 }
