@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class SecondPlayerControl : MonoBehaviour
 {
     private float speed = 20.0f;
     private float turnSpeed = 25.0f;
@@ -15,11 +15,11 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Here we Take Player Input
-        horzontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        horzontalInput = Input.GetAxis("Horizontal2");
+        verticalInput = Input.GetAxis("Vertical2");
 
         // This makes vehicle move forward or backward
         transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
